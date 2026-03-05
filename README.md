@@ -6,7 +6,7 @@ A Model Context Protocol server that retrieves transcripts from YouTube videos w
 
 ## Why Chunking?
 
-A 2-hour YouTube transcript can be 30k+ characters — far too much context for a single LLM call, especially with smaller models. This server lets an agentic system:
+A 2-hour YouTube transcript can be 30k+ tokens — far too much context for a single LLM call, especially with smaller models. This server lets an agentic system:
 
 1. **Cache once** — fetch the transcript a single time, even under parallel requests
 2. **Slice by time range** — request only the chunk needed (e.g., minutes 10–15)
